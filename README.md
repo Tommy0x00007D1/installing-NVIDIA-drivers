@@ -2,9 +2,6 @@
 
 # https://github.com/NVIDIA/open-gpu-kernel-modules
 
-## Tracing code execution and transfering the output to file with 2>&1
-strace ./saxpy.cu 2>&1 | more
-
 ## To show the module loaded in kernel
 lsmod
 
