@@ -49,14 +49,11 @@ hexdump -C kernel_module.ko | tail
 
 ## Make sure all the drivers are the same version for example 515.48.07 and cuda is the latest version
 #
-#
 ## Links Official
-#
 #
 ### I've used deb(network) because the other options didn't have latest drivers:
 #
 # https://developer.nvidia.com/cuda-downloads?target_os=Linux&target_arch=x86_64&Distribution=Ubuntu&target_version=22.04&target_type=deb_local
-#
 #
 ### Latest Ubuntu drivers:
 #
@@ -68,7 +65,6 @@ hexdump -C kernel_module.ko | tail
 #
 ### Unable to determine the device handle for GPU 0000:09:00.0 (probably a cuda problem or NVreg parameter)
 # https://stdworkflow.com/1479/solve-the-error-unable-to-determine-the-device-handle-for-gpu-0000-09-00-0
-#
 #
 ### Ubuntu packages (has latest drivers) 
 # https://ubuntu.pkgs.org/20.04/cuda-amd64/nvidia-utils-515_515.48.07-0ubuntu1_amd64.deb.html
