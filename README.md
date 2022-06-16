@@ -27,7 +27,7 @@ authorityKeyIdentifier=keyid" > /tmp/x509.genkey
 
 ## Then move the /tmp/x509.genkey file to your certs folder /lib/modules/$(uname -r)/build/certs
 
-## End use openssl to generate key:
+## And use openssl to generate key:
 
 openssl req -new -nodes -utf8 -sha512 -days 36500 -batch -x509 -config x509.genkey -outform DER -out signing_key.x509 -keyout signing_key.pem
 
@@ -101,5 +101,3 @@ sudo apt-get --purge remove nvidia-*
 # https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/managing_monitoring_and_updating_the_kernel/signing-kernel-modules-for-secure-boot_managing-monitoring-and-updating-the-kernel
 # https://wiki.gentoo.org/wiki/Signed_kernel_module_support
 # https://download.nvidia.com/XFree86/Linux-x86_64/510.39.01/README/gsp.html
-#
-#
