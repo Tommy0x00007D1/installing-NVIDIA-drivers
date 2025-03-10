@@ -12,6 +12,7 @@ be available anymore.
 
 ## To show the module loaded in kernel
 lsmod
+lscpi -nvv
 
 ## Show installed modules
 dkms status
@@ -90,6 +91,16 @@ sudo dpkg --purge --force-all package_name
 #removing all nvidia drivers (not tested)
 sudo apt-get --purge remove nvidia-*
 
+
+# NEW DRIVER 570.124.06
+1. Followed https://github.com/NVIDIA/open-gpu-kernel-modules to make install.
+2. Installed GSP firmware and user-space NVIDIA GPU driver with sh ./NVIDIA-Linux-[...].run --no-kernel-modules unfortunately the latest version I found was 570.124.04
+3. Not Working 
+4. Also installed:
+  sudo dnf install akmod-nvidia # rhel/centos users can use kmod-nvidia instead
+  sudo dnf install xorg-x11-drv-nvidia-cuda #optional for cuda/nvdec/nvenc support
+  sudo dnf mark user akmod-nvidia # so dnf autoremove doesnt remove it
+from https://rpmfusion.org/Howto/NVIDIA#About_this_Howto
 
 
 
