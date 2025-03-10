@@ -2,6 +2,13 @@
 
 # https://github.com/NVIDIA/open-gpu-kernel-modules
 
+This is a guide/list of problems I found while
+installing open source drivers. I made it for myself
+that's why stuff are written randomly, if it 
+helps you then that's great.
+
+
+
 ## To show the module loaded in kernel
 lsmod
 
