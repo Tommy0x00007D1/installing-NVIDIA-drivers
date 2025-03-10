@@ -6,7 +6,8 @@ This is a guide/list of problems I found while
 installing open source drivers. I made it for myself
 that's why stuff are written randomly, if it 
 helps you then that's great.
-
+It is old so most things changed and links might not
+be available anymore.
 
 
 ## To show the module loaded in kernel
