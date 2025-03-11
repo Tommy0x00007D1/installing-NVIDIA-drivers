@@ -92,16 +92,30 @@ sudo dpkg --purge --force-all package_name
 sudo apt-get --purge remove nvidia-*
 
 
-# NEW DRIVER 570.124.06
-1. Followed https://github.com/NVIDIA/open-gpu-kernel-modules to make install.
-2. Installed GSP firmware and user-space NVIDIA GPU driver with sh ./NVIDIA-Linux-[...].run --no-kernel-modules unfortunately the latest version I found was 570.124.04
-3. Not Working 
-4. Also installed:
-  sudo dnf install akmod-nvidia # rhel/centos users can use kmod-nvidia instead
-  sudo dnf install xorg-x11-drv-nvidia-cuda #optional for cuda/nvdec/nvenc support
-  sudo dnf mark user akmod-nvidia # so dnf autoremove doesnt remove it
-from https://rpmfusion.org/Howto/NVIDIA#About_this_Howto
+# NEW DRIVER 570.124.04 Fedora41
+## No open source kernel modules
+## Secure Boot Disable because of signing key
 
+1. remove all previous drivers:
+``` 
+  $ sudo dnf remove nvidia-driver\*
+  $ dnf repoqeury --userinstalled | grep nvidia # remove every installed packet 
+  # check if modules loaded then rm 
+  $ lsmod | grep nvidia
+  $ lscpi -nvv | grep nvidia
+  $ reboot
+
+```
+
+2. install dependencies
+
+
+
+3. go to nvidia official site and download driver .run
+```
+  $ sh ./NVIDIA*.run
+  $ reboot 
+```
 
 
 
